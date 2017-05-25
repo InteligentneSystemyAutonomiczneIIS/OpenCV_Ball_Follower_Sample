@@ -12,7 +12,8 @@ qtcAddDeployment()
 
 HEADERS += \
     rs232.h \
-    stdafx.h
+    stdafx.h \
+    ArduinoSerialCommunicator.hpp
 
 LIBS += -L/usr/local/libs -lopencv_core -lopencv_highgui \
 -lopencv_imgcodecs -lopencv_imgproc \
