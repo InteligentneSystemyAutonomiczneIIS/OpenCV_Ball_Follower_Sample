@@ -179,7 +179,7 @@ int main()
         std::vector<cv::Vec3f> circlesFoundUsingContours;
         for (auto contour : contouredElementsOnScreen)
         {
-            if (contour.size() < 100) continue;
+            //if (contour.size() < 100) continue;
             cv::Moments tempMoments = cv::moments(contour);
             //double dM02 = tempMoments.m02;
             //double dM20 = tempMoments.m20;
@@ -192,11 +192,26 @@ int main()
             double maxMoment = std::max(dN02, dN20);
             double minMoment = std::min(dN02, dN20);
 
-            if ((maxMoment / minMoment) > 0.9 && (maxMoment / minMoment) < 1.1)
+            if ((maxMoment / minMoment) > 0.75 && (maxMoment / minMoment) < 1.25)
             {
                 std::cout << "Found circle" << std::endl;
                 int posY = tempMoments.m01 / tempMoments.m00;
                 int posX = tempMoments.m10 / tempMoments.m00;
+
+                ////TODO:
+//                //Check if this is truly a circle - calculate how far should be each contour point from the center
+//                std::vector<float> differenceInDistanceFromCenter;
+//                float average = 0;
+//                for(cv::Point point : contour)
+//                {
+//                    float theoreticalRadius = std::sqrt( std::pow((point.x - posX),2) + std::pow((point.y - posY),2 ) );
+//                    float diff = radius - theoreticalRadius;
+//                    average += diff;
+//                    differenceInDistanceFromCenter.push_back(diff);
+//                }
+//                average = average / differenceInDistanceFromCenter.size();
+
+
                 if (posX > 0 && posY > 0)
                 {
                     circlesFoundUsingContours.push_back(cv::Vec3f(posX, posY, radius));
