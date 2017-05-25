@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 3.2.1, 2017-05-18T16:44:23. -->
+<!-- Written by QtCreator 3.2.1, 2017-05-25T16:03:56. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -201,8 +201,8 @@
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Arduino_Ball_Follower</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/pi/MySoftware/Ball_Follower/Arduino_Ball_Follower/Arduino_Ball_Follower.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Arduino_Ball_Follower2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/pi/MySoftware/BallFollower/Arduino_Ball_Follower/Arduino_Ball_Follower/Arduino_Ball_Follower.pro</value>
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.CommandLineArguments"></value>
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.ProFile">Arduino_Ball_Follower.pro</value>
     <value type="bool" key="Qt4ProjectManager.Qt4RunConfiguration.UseDyldImageSuffix">false</value>

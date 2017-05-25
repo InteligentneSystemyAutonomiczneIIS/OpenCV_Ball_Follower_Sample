@@ -28,12 +28,12 @@ public:
 
 	}
 
-	ArduinoSerialCommunicator(int portNumber, int baudRate = 9600, int dataBits = 8, char parity = 'N', int stopBits = 1)
-	{
+//	ArduinoSerialCommunicator(int portNumber, int baudRate = 9600, int dataBits = 8, char parity = 'N', int stopBits = 1)
+//	{
 
-		throw std::logic_error("Not Implemented");
+//		throw std::logic_error("Not Implemented");
 
-	}
+//	}
 
 
 
@@ -55,6 +55,7 @@ public:
 	int sendByte(unsigned char byteToSend)
 	{
 		int status = RS232_SendByte(this->portNumber, byteToSend);
+        return status;
 
 	}
 
