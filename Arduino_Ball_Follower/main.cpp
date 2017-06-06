@@ -1,7 +1,6 @@
 #include "stdafx.h"
 
 #include "ArduinoSerialCommunicator.hpp"
-#include "OpenCV_test1.h"
 #define TARGET_FPS 30
 #define ARDUINO_COMMUNICATION 0
 
@@ -110,9 +109,9 @@ std::pair <std::vector<std::vector<cv::Point>>, std::vector<cv::Vec3i>> getConto
 
 }
 
-std::vector<cv::Vec3i> findCirclesUsingHoughes(cv::Mat imageToSearchCirclesIn)
+std::vector<cv::Vec3f> findCirclesUsingHoughes(cv::Mat imageToSearchCirclesIn)
 {
-	std::vector<cv::Vec3i> circlesFoundUsingHoughes;
+	std::vector<cv::Vec3f> circlesFoundUsingHoughes;
 
 	//Hough Transform - detecting circles
 	//Blur the image before - improves detection
@@ -361,7 +360,7 @@ int main()
 		if (hough_circles)
 		{
 
-			std::vector<cv::Vec3i> circlesFoundUsingHoughes;
+			std::vector<cv::Vec3f> circlesFoundUsingHoughes;
 			circlesFoundUsingHoughes = findCirclesUsingHoughes(imgThresholded);
 					
 
